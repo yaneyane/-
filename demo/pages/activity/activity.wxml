@@ -1,0 +1,25 @@
+<!--pages/activity/activity.wxml-->
+<view>
+  <view>正在进行的活动</view>
+  <block wx:for="{{list}}" wx:key="id">
+    <view class="kind-list__item">
+      <view id="{{item.id}}" class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}" bindtap="kindToggle">
+        <view class="weui-flex__item"></view>
+        <view>活动</view>
+          
+      </view>
+      <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
+        <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
+          <view>{{info}}</view>
+          <view>{{item.info}}</view>
+          <view>{{item.awardinfo}}</view>
+          <view>
+            <button type='primary'>参与</button>
+            <button type='primary'>分享</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+

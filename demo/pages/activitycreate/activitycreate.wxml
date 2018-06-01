@@ -1,0 +1,22 @@
+
+<view class="page">
+  
+  <form bindtap='createForm'>
+    <view>填写活动信息</view>
+    <view>
+      <view>活动名称</view>
+      <view><input type='text' placeholder='name' name='name'></input></view>
+    </view>
+    <view>
+      <view>结束时间</view>
+      <view><input type='date' placeholder='格式如2000-01-01' name='date'></input></view>
+    </view>
+    <view>
+      <button type='primary'>提交</button>
+    </view>
+    <import src="wxParse/wxParse.wxml"/>
+    <view>
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+  </form>
+</view>

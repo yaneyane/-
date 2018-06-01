@@ -1,0 +1,35 @@
+<!--pages/awardcreate/awardcreate.wxml-->
+<view class="kind-list">
+  <form bindsubmit='awardForm'>
+    <view class="page__desc">
+      填写奖品信息
+    </view>
+    <view class='block'>
+      <block wx:for="{{list}}" wx:key="id">
+        <view class="kind-list__item">
+          <view id="{{item.id}}" class="weui-flex kind-list__item-hd {{item.open ? 'kind-list__item-hd_show' : ''}}" bindtap="kindToggle">
+            <view class="weui-flex__item">{{item.name}}</view>
+          </view>
+          <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
+            <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
+              
+              <view>书名</view>
+              <input bindinput='bookname'></input>
+              <view>书籍信息</view>
+              <input bindinput='bookinfo'></input>
+              <view>qr码</view>
+              <input bindinput='qrcode'></input>
+              <view>奖品数量</view>
+              <input bindinput='quantity'></input>
+
+                
+            </view>
+          </view>
+        </view>
+      </block>
+    </view>
+    <view>
+      <button class='btn_foot' form-type='submit' type='primary' >提交</button>
+    </view>
+  </form>
+</view>

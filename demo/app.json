@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/activity/activity",
+    "pages/awardindex/awardindex",
+    "pages/userinfo/userinfo",
+    
+    "pages/activitycreate/activitycreate",
+    "pages/awardcreate/awardcreate",
+    "pages/create/create"
+    
+  ]
+}
